@@ -1,0 +1,12 @@
+POST /orders/markasshipped HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "orderId": 93348442,
+  "carrierCode": "usps",
+  "shipDate": "2014-04-01",
+  "trackingNumber": "913492493294329421",
+  "notifyCustomer": true,
+  "notifySalesChannel": true
+}

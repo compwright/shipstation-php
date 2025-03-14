@@ -1,0 +1,10 @@
+POST /orders/unassignuser HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "orderIds": [
+    123456789,
+    12345679
+  ]
+}

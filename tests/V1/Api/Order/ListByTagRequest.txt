@@ -1,0 +1,3 @@
+GET /orders/listbytag?orderStatus=orderStatus&tagId=tagId&page=1&pageSize=25 HTTP/1.1
+Host: ssapi.shipstation.com
+
