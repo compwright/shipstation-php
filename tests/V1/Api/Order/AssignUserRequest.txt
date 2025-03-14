@@ -1,0 +1,11 @@
+POST /orders/assignuser HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "orderIds": [
+    123456789,
+    12345679
+  ],
+  "userId": "123456AB-ab12-3c4d-5e67-89f1abc1defa"
+}

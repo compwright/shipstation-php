@@ -1,0 +1,6 @@
+GET /accounts/listtags HTTP/1.1
+Host: ssapi.shipstation.com
+x-partner: baz
+User-Agent: GuzzleHttp/7
+Authorization: Basic Zm9vOmJhcg==
+
