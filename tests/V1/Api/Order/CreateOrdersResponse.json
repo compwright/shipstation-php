@@ -1,0 +1,19 @@
+{
+    "hasErrors": false,
+    "results": [
+        {
+            "orderId": 168426889,
+            "orderNumber": "TEST-ORDER-API-DOCS-01",
+            "orderKey": "0f6bec18-3e89-4881-83aa-f392d84f4c74",
+            "success": true,
+            "errorMessage": null
+        },
+        {
+            "orderId": 168432343,
+            "orderNumber": "TEST-ORDER-API-DOCS-02",
+            "orderKey": "0d6bec18-3e79-4981-83ca-f392d84f4c19",
+            "success": true,
+            "errorMessage": null
+        }
+    ]
+}
