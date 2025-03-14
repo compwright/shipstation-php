@@ -1,0 +1,8 @@
+POST /orders/holduntil HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "orderId": 1072467,
+  "holdUntilDate": "2014-12-01"
+}
