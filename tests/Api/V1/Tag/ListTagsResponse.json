@@ -1,0 +1,22 @@
+[
+  {
+    "tagId": 8362,
+    "name": "Backorder",
+    "color": "#800080"
+  },
+  {
+    "tagId": 8324,
+    "name": "Canada",
+    "color": "#ff0000"
+  },
+  {
+    "tagId": 8336,
+    "name": "Fragile",
+    "color": "#33CCCC"
+  },
+  {
+    "tagId": 8221,
+    "name": "Repeat Buyer",
+    "color": "#CC99FF"
+  }
+]
