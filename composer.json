@@ -1,0 +1,34 @@
+{
+    "name": "compwright/shipstation-php",
+    "description": "ShipStation v1/v2 API Client for PHP",
+    "keywords": ["psr-7", "guzzle", "openapi"],
+    "homepage": "https://github.com/compwright/shipstation-php",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3 || ^8.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "compwright/should-retry": "^1.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.72",
+        "helmich/phpunit-psr7-assert": "dev-master",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5"
+    },
+    "authors": [
+        {
+            "name": "Jonathon Hill",
+            "email": "jonathon@compwright.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Compwright\\ShipstationPhp\\": "src/"
+        }
+    }
+}

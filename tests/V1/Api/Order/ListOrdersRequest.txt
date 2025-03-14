@@ -1,0 +1,3 @@
+GET /orders?customerName=customerName&itemKeyword=itemKeyword&createDateStart=createDateStart&createDateEnd=createDateEnd&modifyDateStart=modifyDateStart&modifyDateEnd=modifyDateEnd&orderDateStart=orderDateStart&orderDateEnd=orderDateEnd&orderNumber=orderNumber&orderStatus=orderStatus&paymentDateStart=paymentDateStart&paymentDateEnd=paymentDateEnd&storeId=storeId&sortBy=sortBy&sortDir=sortDir&page=page&pageSize=pageSize HTTP/1.1
+Host: ssapi.shipstation.com
+

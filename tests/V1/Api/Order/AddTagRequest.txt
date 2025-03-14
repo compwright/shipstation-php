@@ -1,0 +1,8 @@
+POST /orders/addtag HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "orderId": 123456,
+  "tagId": 1234
+}
