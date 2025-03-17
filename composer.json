@@ -1,7 +1,11 @@
 {
     "name": "compwright/shipstation-php",
     "description": "ShipStation v1/v2 API Client for PHP",
-    "keywords": ["psr-7", "guzzle", "openapi"],
+    "keywords": [
+        "psr-7",
+        "guzzle",
+        "openapi"
+    ],
     "homepage": "https://github.com/compwright/shipstation-php",
     "type": "library",
     "license": "MIT",
@@ -25,7 +29,7 @@
             "email": "jonathon@compwright.com"
         }
     ],
-    "autoload" : {
+    "autoload": {
         "psr-4": {
             "Compwright\\ShipstationPhp\\": "src/"
         }
