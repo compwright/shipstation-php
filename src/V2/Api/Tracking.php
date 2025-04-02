@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Result\EmptyResult;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Result\EmptyResult;
 
 /**
  * @see https://docs.shipstation.com/openapi/tracking

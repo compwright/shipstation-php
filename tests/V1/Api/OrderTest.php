@@ -142,9 +142,6 @@ class OrderTest extends TestCase
         $this->assertRequestMatchesExpected($expectedRequest, $this->rootHandler->getLastRequest());
         $this->assertSame($expectedResponse, $result->getResponse());
         $this->assertCount(1, $result);
-        $this->assertEquals(1, $result->totalCount());
-        $this->assertEquals(1, $result->currentPage());
-        $this->assertEquals(1, $result->pageLimit());
         $this->assertEquals(
             [123456789],
             array_column(iterator_to_array($result), 'orderId')
@@ -178,9 +175,6 @@ class OrderTest extends TestCase
         $this->assertRequestMatchesExpected($expectedRequest, $this->rootHandler->getLastRequest());
         $this->assertSame($expectedResponse, $result->getResponse());
         $this->assertCount(2, $result);
-        $this->assertEquals(2, $result->totalCount());
-        $this->assertEquals(1, $result->currentPage());
-        $this->assertEquals(1, $result->pageLimit());
         $this->assertEquals(
             [987654321, 123456789],
             array_column(iterator_to_array($result), 'orderId')

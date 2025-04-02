@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Model;
 
+use Compwright\EasyApi\Type\StringType;
 use Compwright\ShipstationPhp\Common\Model\BaseModel;
-use Compwright\ShipstationPhp\Common\Model\StringType;
 
 class AdvancedOptions extends BaseModel
 {

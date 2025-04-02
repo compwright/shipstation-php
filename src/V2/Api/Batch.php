@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\EmptyResult;
-use Compwright\ShipstationPhp\Common\Result\IterableResult;
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\EmptyResult;
+use Compwright\EasyApi\Result\Json\IterableResult;
+use Compwright\EasyApi\Result\Json\Result;
 use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
 
 /**
@@ -43,7 +44,7 @@ class Batch
     public function create(array $body): Result
     {
         $op = Operation::fromSpec('POST /v2/batches')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -96,7 +97,7 @@ class Batch
     {
         $op = Operation::fromSpec('POST /v2/batches/%s/add')
             ->bindArgs($batchId)
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -135,7 +136,7 @@ class Batch
     {
         $op = Operation::fromSpec('POST /v2/batches/%s/remove')
             ->bindArgs($batchId)
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new EmptyResult());
     }
 }

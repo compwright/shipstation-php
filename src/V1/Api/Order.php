@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\IterableResult;
-use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\IterableResult;
+use Compwright\EasyApi\Result\Json\Result;
 use Compwright\ShipstationPhp\V1\Model\Order as OrderModel;
 use LengthException;
 
@@ -24,7 +24,7 @@ class Order
     public function addTag(int|string $orderId, int|string $tagId): Result
     {
         $op = Operation::fromSpec('POST /orders/addtag')
-            ->setBody(compact('orderId', 'tagId'));
+            ->setBody(new JsonBody(compact('orderId', 'tagId')));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -34,7 +34,7 @@ class Order
     public function assignUser(int|string $userId, int|string ...$orderIds): Result
     {
         $op = Operation::fromSpec('POST /orders/assignuser')
-            ->setBody(compact('orderIds', 'userId'));
+            ->setBody(new JsonBody(compact('orderIds', 'userId')));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -46,7 +46,7 @@ class Order
     public function createLabel(array $body): Result
     {
         $op = Operation::fromSpec('POST /orders/createlabelfororder')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -61,7 +61,7 @@ class Order
             throw new LengthException('Cannot create or update more than 100 orders at a time');
         }
         $op = Operation::fromSpec('POST /orders/createorders')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new IterableResult('results'));
     }
 
@@ -71,7 +71,7 @@ class Order
     public function createOrUpdate(OrderModel $body): Result
     {
         $op = Operation::fromSpec('POST /orders/createorder')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -101,7 +101,7 @@ class Order
     public function holdUntil(int|string $orderId, string $holdUntilDate): Result
     {
         $op = Operation::fromSpec('POST /orders/holduntil')
-            ->setBody(compact('orderId', 'holdUntilDate'));
+            ->setBody(new JsonBody(compact('orderId', 'holdUntilDate')));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -110,11 +110,11 @@ class Order
      *
      * @see https://www.shipstation.com/docs/api/orders/list-by-tag/
      */
-    public function listByTag(array $query): PaginatedIterableResult
+    public function listByTag(array $query): IterableResult
     {
         $op = Operation::fromSpec('GET /orders/listbytag')
             ->setQueryParams($query);
-        return $this->client->__invoke($op, new PaginatedIterableResult('orders'));
+        return $this->client->__invoke($op, new IterableResult('orders'));
     }
 
     /**
@@ -122,13 +122,13 @@ class Order
      *
      * @see https://www.shipstation.com/docs/api/orders/list-orders/
      */
-    public function listAll(array $query = []): PaginatedIterableResult
+    public function listAll(array $query = []): IterableResult
     {
         $op = Operation::fromSpec('GET /orders');
         if (count($query) > 0) {
             $op->setQueryParams($query);
         }
-        return $this->client->__invoke($op, new PaginatedIterableResult('orders'));
+        return $this->client->__invoke($op, new IterableResult('orders'));
     }
 
     /**
@@ -139,7 +139,7 @@ class Order
     public function markShipped(array $body): Result
     {
         $op = Operation::fromSpec('POST /orders/markasshipped')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -149,7 +149,7 @@ class Order
     public function removeTag(int|string $orderId, int|string $tagId): Result
     {
         $op = Operation::fromSpec('POST /orders/removetag')
-            ->setBody(compact('orderId', 'tagId'));
+            ->setBody(new JsonBody(compact('orderId', 'tagId')));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -159,7 +159,7 @@ class Order
     public function restoreFromHold(int|string $orderId): Result
     {
         $op = Operation::fromSpec('POST /orders/restorefromhold')
-            ->setBody(compact('orderId'));
+            ->setBody(new JsonBody(compact('orderId')));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -169,7 +169,7 @@ class Order
     public function unassign(int|string ...$orderIds): Result
     {
         $op = Operation::fromSpec('POST /orders/unassignuser')
-            ->setBody(compact('orderIds'));
+            ->setBody(new JsonBody(compact('orderIds')));
         return $this->client->__invoke($op, new Result());
     }
 }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\Common\Result;
 
+use Compwright\EasyApi\Result\Json\IterableResult;
+
 class PaginatedIterableResult extends IterableResult
 {
     public function totalCount(): int

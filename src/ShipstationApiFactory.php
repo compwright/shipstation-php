@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\OperationRequestFactory;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\OperationRequestFactory;
 use Compwright\ShouldRetry\RetryAfter;
 use Compwright\ShouldRetry\ShouldRetry;
 use GuzzleHttp\Client;

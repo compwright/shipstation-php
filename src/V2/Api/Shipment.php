@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\EmptyResult;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\Result\EmptyResult;
+use Compwright\EasyApi\Result\Json\Result;
 use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
-use Compwright\ShipstationPhp\Common\Result\Result;
 
 /**
  * @see https://docs.shipstation.com/openapi/shipments

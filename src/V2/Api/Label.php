@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\IterableResult;
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\IterableResult;
+use Compwright\EasyApi\Result\Json\Result;
 
 /**
  * @see https://docs.shipstation.com/openapi/labels
@@ -36,7 +37,7 @@ class Label
     public function create(array $body): Result
     {
         $op = Operation::fromSpec('POST /v2/labels')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -49,7 +50,7 @@ class Label
     {
         $op = Operation::fromSpec('POST /v2/labels/%s')
             ->bindArgs($rateId)
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -62,7 +63,7 @@ class Label
     {
         $op = Operation::fromSpec('POST /v2/labels/shipment/%s')
             ->bindArgs($shipmentId)
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -86,7 +87,7 @@ class Label
     {
         $op = Operation::fromSpec('POST /v2/labels/%s/return')
             ->bindArgs($labelId)
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 

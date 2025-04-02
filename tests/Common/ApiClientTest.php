@@ -2,7 +2,10 @@
 
 namespace Compwright\ShipstationPhp\Common;
 
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationRequestFactory;
+use Compwright\EasyApi\Result\Json\Result;
 use GuzzleHttp\Psr7\HttpFactory;
 use GuzzleHttp\Psr7\Request;
 use PHPUnit\Framework\TestCase;

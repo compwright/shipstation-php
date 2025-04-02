@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\Webhook;
 
+use Compwright\EasyWebhook\HeaderException;
 use GuzzleHttp\Psr7\Request;
 use PHPUnit\Framework\TestCase;
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
+use Compwright\EasyApi\ApiClient;
 
 /**
  * @see https://docs.shipstation.com

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Model;
 
+use Compwright\EasyApi\Type\DateType;
+use Compwright\EasyApi\Type\StringType;
 use Compwright\ShipstationPhp\Common\Model\BaseModel;
-use Compwright\ShipstationPhp\Common\Model\DateType;
-use Compwright\ShipstationPhp\Common\Model\StringType;
 
 class Label extends BaseModel
 {

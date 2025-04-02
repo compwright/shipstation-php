@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\Result;
 use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
-use Compwright\ShipstationPhp\Common\Result\Result;
 
 /**
  * @see https://docs.shipstation.com/openapi/pickups
@@ -39,7 +40,7 @@ class Pickup
     public function create(array $body): Result
     {
         $op = Operation::fromSpec('POST /v2/pickups')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 

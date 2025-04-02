@@ -14,6 +14,8 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "compwright/easy-api": "^1.1",
+        "compwright/easy-webhook": "^1.0",
         "compwright/should-retry": "^1.0",
         "guzzlehttp/guzzle": "^7.3",
         "guzzlehttp/psr7": "^1.7 || ^2.0"

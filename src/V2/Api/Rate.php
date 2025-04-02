@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V2\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\Result;
 
 /**
  * @see https://docs.shipstation.com/openapi/rates
@@ -25,7 +26,7 @@ class Rate
     public function getShippingRates(array $body): Result
     {
         $op = Operation::fromSpec('POST /v2/rates')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -37,7 +38,7 @@ class Rate
     public function estimate(array $body): Result
     {
         $op = Operation::fromSpec('POST /v2/rates/estimate')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 

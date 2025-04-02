@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Compwright\ShipstationPhp\V1\Model;
 
 use Compwright\ShipstationPhp\Common\Model\BaseModel;
-use Compwright\ShipstationPhp\Common\Model\StringType;
+use Compwright\EasyApi\Type\StringType;
 
 class Weight extends BaseModel
 {

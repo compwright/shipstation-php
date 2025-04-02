@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Api;
 
-use Compwright\ShipstationPhp\Common\ApiClient;
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\Result;
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\Result;
 use Compwright\ShipstationPhp\V1\Model\Label;
 
 class Shipment
@@ -21,7 +22,7 @@ class Shipment
     public function createLabel(Label $body): Result
     {
         $op = Operation::fromSpec('POST /shipments/createlabel')
-            ->setBody($body);
+            ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
     }
 
@@ -31,7 +32,7 @@ class Shipment
     public function voidLabel(int $shipmentId): Result
     {
         $op = Operation::fromSpec('POST /shipments/voidlabel')
-            ->setBody(compact('shipmentId'));
+            ->setBody(new JsonBody(compact('shipmentId')));
         return $this->client->__invoke($op, new Result());
     }
 }

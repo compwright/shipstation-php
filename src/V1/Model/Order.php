@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Model;
 
+use Compwright\EasyApi\Type\DateType;
+use Compwright\EasyApi\Type\ListType;
+use Compwright\EasyApi\Type\StringType;
 use Compwright\ShipstationPhp\Common\Model\BaseModel;
-use Compwright\ShipstationPhp\Common\Model\DateType;
-use Compwright\ShipstationPhp\Common\Model\ListType;
-use Compwright\ShipstationPhp\Common\Model\StringType;
 
 class Order extends BaseModel
 {

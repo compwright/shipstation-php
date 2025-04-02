@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Compwright\ShipstationPhp\V1\Api;
 
-use Compwright\ShipstationPhp\Common\Operation;
-use Compwright\ShipstationPhp\Common\Result\Result;
-use Compwright\ShipstationPhp\Common\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\Result\Json\Result;
+use Compwright\EasyApi\ApiClient;
 
 class Tag
 {
