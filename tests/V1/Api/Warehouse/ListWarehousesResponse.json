@@ -1,0 +1,66 @@
+[
+  {
+    "warehouseId": 17977,
+    "warehouseName": "Main warehouse",
+    "originAddress": {
+      "name": "Spring warehouse",
+      "company": "",
+      "street1": "123 S SPRING RD  ",
+      "street2": "",
+      "street3": "",
+      "city": "Elmurst",
+      "state": "IL",
+      "postalCode": "60126",
+      "country": "US",
+      "phone": "5121112222",
+      "residential": false
+    },
+    "returnAddress": {
+      "name": "Chicago House",
+      "company": "",
+      "street1": "123 S SPRING RD  ",
+      "street2": "",
+      "street3": "",
+      "city": "Elmurst",
+      "state": "IL",
+      "postalCode": "60126",
+      "country": "US",
+      "phone": "5121112222",
+      "residential": null
+    },
+    "createDate": "2014-10-21T08:11:43.8800000",
+    "isDefault": true
+  },
+  {
+    "warehouseId": 14265,
+    "warehouseName": "Austin",
+    "originAddress": {
+      "name": "Austin",
+      "company": "ShipStation",
+      "street1": "2815 Exposition Blvd",
+      "street2": "",
+      "street3": "",
+      "city": "Austin",
+      "state": "TX",
+      "postalCode": "78703",
+      "country": "US",
+      "phone": "5124445555",
+      "residential": false
+    },
+    "returnAddress": {
+      "name": "ShipStation",
+      "company": "ShipStation",
+      "street1": "2815 Exposition Blvd",
+      "street2": "",
+      "street3": "",
+      "city": "Austin",
+      "state": "TX",
+      "postalCode": "78703",
+      "country": "US",
+      "phone": "5124445555",
+      "residential": null
+    },
+    "createDate": "2014-05-27T09:54:29.9600000",
+    "isDefault": false
+  }
+]

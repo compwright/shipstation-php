@@ -21,6 +21,7 @@ This package can be installed via [Composer](http://getcomposer.org):
 * Orders
 * Shipments
 * Tags
+* Warehouses
 
 When the V2 Shipping API fully supports these, this collection will be removed.
 

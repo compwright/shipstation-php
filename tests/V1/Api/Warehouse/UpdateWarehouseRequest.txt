@@ -1,0 +1,41 @@
+PUT /warehouses/warehouseId HTTP/1.1
+Host: ssapi.shipstation.com
+x-partner: baz
+User-Agent: GuzzleHttp/7
+Authorization: Basic Zm9vOmJhcg==
+Content-Type: application/json
+
+{
+  "warehouseId": 12345,
+  "warehouseName": "API Ship From Location",
+  "originAddress": {
+    "name": "API Warehouse",
+    "company": "ShipStation",
+    "street1": "2815 Exposition Blvd",
+    "street2": null,
+    "street3": null,
+    "city": "Austin",
+    "state": "TX",
+    "postalCode": "78703",
+    "country": "US",
+    "phone": "512-555-5555",
+    "residential": true,
+    "addressVerified": null
+  },
+  "returnAddress": {
+    "name": "API Ship From Location",
+    "company": "ShipStation",
+    "street1": "2815 Exposition Blvd",
+    "street2": null,
+    "street3": null,
+    "city": "Austin",
+    "state": "TX",
+    "postalCode": "78703",
+    "country": "US",
+    "phone": "512-555-5555",
+    "residential": null,
+    "addressVerified": null
+  },
+  "createDate": "2015-07-02T08:38:31.4870000",
+  "isDefault": true
+}
