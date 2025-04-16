@@ -8,6 +8,7 @@ use Compwright\EasyApi\ApiClient;
 use Compwright\EasyApi\Operation;
 use Compwright\EasyApi\OperationBody\JsonBody;
 use Compwright\EasyApi\Result\Json\Result;
+use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
 use Compwright\ShipstationPhp\V1\Model\Label;
 
 class Shipment
@@ -24,6 +25,20 @@ class Shipment
         $op = Operation::fromSpec('POST /shipments/createlabel')
             ->setBody(new JsonBody($body));
         return $this->client->__invoke($op, new Result());
+    }
+
+    /**
+     * @param array<string, mixed> $query
+     *
+     * @see https://www.shipstation.com/docs/api/shipments/list/
+     */
+    public function listAll(array $query = []): PaginatedIterableResult
+    {
+        $op = Operation::fromSpec('GET /shipments');
+        if (count($query) > 0) {
+            $op->setQueryParams($query);
+        }
+        return $this->client->__invoke($op, new PaginatedIterableResult('shipments'));
     }
 
     /**
