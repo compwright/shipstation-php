@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/compwright/shipstation-php/compare/v1.2.0...v1.3.0) (2025-05-14)
+
+
+### Features
+
+* add v1 carriers support ([a64eee4](https://github.com/compwright/shipstation-php/commit/a64eee48cee7db650d34b52fd413e3424a1c68ee))
+
 ## [1.2.0](https://github.com/compwright/shipstation-php/compare/v1.1.0...v1.2.0) (2025-04-16)
 
 
