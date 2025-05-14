@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Stamps.com",
+    "code": "stamps_com",
+    "accountNumber": "SS123",
+    "requiresFundedAccount": true,
+    "balance": 24.27,
+    "nickname": null,
+    "shippingProviderId": 12345,
+    "primary": true
+  },
+  {
+    "name": "Stamps.com",
+    "code": "stamps_com",
+    "accountNumber": "SS1234",
+    "requiresFundedAccount": true,
+    "balance": 2400.27,
+    "nickname": "Stamps.com 2",
+    "shippingProviderId": 12346,
+    "primary": false
+  },
+  {
+    "name": "UPS",
+    "code": "ups",
+    "accountNumber": "ABCR80",
+    "requiresFundedAccount": false,
+    "balance": 0,
+    "nickname": null,
+    "shippingProviderId": 12347,
+    "primary": true
+  },
+  {
+    "name": "FedEx",
+    "code": "fedex",
+    "accountNumber": 297929999,
+    "requiresFundedAccount": false,
+    "balance": 0,
+    "nickname": "SS",
+    "shippingProviderId": 12348,
+    "primary": true
+  },
+  {
+    "name": "Endicia",
+    "code": "endicia",
+    "accountNumber": "913999",
+    "requiresFundedAccount": true,
+    "balance": 0,
+    "nickname": null,
+    "shippingProviderId": 12349,
+    "primary": true
+  }
+]

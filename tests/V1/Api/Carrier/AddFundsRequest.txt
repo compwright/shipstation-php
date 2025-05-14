@@ -1,0 +1,8 @@
+POST https://ssapi.shipstation.com/carriers/addfunds HTTP/1.1
+Host: ssapi.shipstation.com
+Content-Type: application/json
+
+{
+  "carrierCode": "fedex",
+  "amount": 20
+}

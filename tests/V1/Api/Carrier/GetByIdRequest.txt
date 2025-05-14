@@ -1,0 +1,3 @@
+GET https://ssapi.shipstation.com/carriers/getcarrier?carrierCode=stamps_com HTTP/1.1
+Host: ssapi.shipstation.com
+

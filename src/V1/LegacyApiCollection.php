@@ -8,6 +8,7 @@ use Compwright\EasyApi\ApiClient;
 
 class LegacyApiCollection
 {
+    public readonly Api\Carrier $carrier;
     public readonly Api\Order $order;
     public readonly Api\Shipment $shipment;
     public readonly Api\Tag $tag;
@@ -15,6 +16,7 @@ class LegacyApiCollection
 
     public function __construct(ApiClient $client)
     {
+        $this->carrier = new Api\Carrier($client);
         $this->order = new Api\Order($client);
         $this->shipment = new Api\Shipment($client);
         $this->tag = new Api\Tag($client);

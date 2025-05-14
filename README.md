@@ -18,6 +18,7 @@ This package can be installed via [Composer](http://getcomposer.org):
 
 `V1\LegacyApiCollection` supports the following ShipStation V1 Legacy API endpoints:
 
+* Carriers
 * Orders
 * Shipments
 * Tags

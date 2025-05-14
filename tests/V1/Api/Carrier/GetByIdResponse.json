@@ -1,0 +1,10 @@
+{
+  "name": "Stamps.com",
+  "code": "stamps_com",
+  "accountNumber": "SS123",
+  "requiresFundedAccount": true,
+  "balance": 24.27,
+  "nickname": null,
+  "shippingProviderId": 12345,
+  "primary": true
+}
