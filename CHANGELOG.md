@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/compwright/shipstation-php/compare/v1.3.1...v1.3.2) (2025-05-19)
+
+
+### Bug Fixes
+
+* v2 Manifest::create() and getById() should return iterable results ([3bc0c0f](https://github.com/compwright/shipstation-php/commit/3bc0c0fc10668a336e45c8d98a339dd2092fba80))
+
 ## [1.3.1](https://github.com/compwright/shipstation-php/compare/v1.3.0...v1.3.1) (2025-05-19)
 
 
