@@ -21,10 +21,15 @@ class Label
 
     /**
      * @see https://docs.shipstation.com/openapi/labels/list_labels
+     * 
+     * @param array<string, mixed> $query
      */
-    public function listAll(): IterableResult
+    public function listAll(array $query = []): IterableResult
     {
         $op = Operation::fromSpec('GET /v2/labels');
+        if (count($query) > 0) {
+            $op->setQueryParams($query);
+        }
         $result = new IterableResult('labels');
         return $this->client->__invoke($op, $result);
     }
