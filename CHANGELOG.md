@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/compwright/shipstation-php/compare/v1.3.0...v1.3.1) (2025-05-19)
+
+
+### Bug Fixes
+
+* add missing query params support to v2 Label::listAll() ([1a6aee1](https://github.com/compwright/shipstation-php/commit/1a6aee192d779413f3e4698f092ee71a3102c51b))
+
 ## [1.3.0](https://github.com/compwright/shipstation-php/compare/v1.2.0...v1.3.0) (2025-05-14)
 
 
