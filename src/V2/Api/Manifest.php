@@ -7,7 +7,7 @@ namespace Compwright\ShipstationPhp\V2\Api;
 use Compwright\EasyApi\ApiClient;
 use Compwright\EasyApi\Operation;
 use Compwright\EasyApi\OperationBody\JsonBody;
-use Compwright\EasyApi\Result\Json\Result;
+use Compwright\EasyApi\Result\Json\IterableResult;
 use Compwright\ShipstationPhp\Common\Result\PaginatedIterableResult;
 
 /**
@@ -37,20 +37,20 @@ class Manifest
      *
      * @see https://docs.shipstation.com/openapi/manifests/create_manifest
      */
-    public function create(array $body): Result
+    public function create(array $body): IterableResult
     {
         $op = Operation::fromSpec('POST /v2/manifests')
             ->setBody(new JsonBody($body));
-        return $this->client->__invoke($op, new Result());
+        return $this->client->__invoke($op, new IterableResult('manifests'));
     }
 
     /**
      * @see https://docs.shipstation.com/openapi/manifests/get_manifest_by_id
      */
-    public function getById(string $manifestId): Result
+    public function getById(string $manifestId): IterableResult
     {
         $op = Operation::fromSpec('POST /v2/manifests/%s')
             ->bindArgs($manifestId);
-        return $this->client->__invoke($op, new Result());
+        return $this->client->__invoke($op, new IterableResult('manifests'));
     }
 }

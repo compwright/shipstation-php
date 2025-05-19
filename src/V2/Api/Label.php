@@ -21,7 +21,7 @@ class Label
 
     /**
      * @see https://docs.shipstation.com/openapi/labels/list_labels
-     * 
+     *
      * @param array<string, mixed> $query
      */
     public function listAll(array $query = []): IterableResult
